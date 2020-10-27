@@ -1,16 +1,26 @@
 {
-  "name": "hi",
+  "name": "mi_carpeta_api",
+  "prettyName": "API para operador 'Mi Carpeta'",
   "version": "0.0.0",
+  "description": "Este es el API de la aplicación 'Mi Carpeta', la cual busca proveer una manera de que los usuarios puedan administrar sus propios documentos, enviarlos a operadores gubernamentales o que los operadores puedan solicitar dichos documentos.",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js",
+    "dev": "nodemon -w ./"
   },
   "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
