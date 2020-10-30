@@ -1,5 +1,5 @@
 const { handleAndReturnError } = require("../services/errorService");
-const { sayHi } = require("../services/TestService")
+const { sayHi } = require("../services/testService")
 
 module.exports = {
   SayHi(req, res) {
