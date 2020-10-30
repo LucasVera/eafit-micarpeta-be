@@ -9,4 +9,5 @@ module.exports = function connectToDb() {
 
   db.on('error', (ex) => console.error(`Error connecting to mongo. ${inspect(ex)}`));
   db.once('open', () => console.log('Successfully connected to mongodb'));
+  
 }
