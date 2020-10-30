@@ -34,14 +34,15 @@ phases:
       # - command
       # - command
   build:
-      # - command
+    commands:
       - npm test
+      # - command
   post_build:
     commands:
       # - mvn package
       # - npm start
       # - mv target/protoapp-1.0-SNAPSHOT.war ROOT.war
-      - zip -r project.zip ./
+      - zip -r Proyecto.zip ./
       # - command
 #reports:
   #report-name-or-arn:
