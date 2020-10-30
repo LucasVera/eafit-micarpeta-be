@@ -35,6 +35,7 @@ phases:
       # - command
   build:
       # - command
+      - npm test
   post_build:
     commands:
       # - mvn package

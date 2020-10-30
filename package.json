@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon -w ./"
+    "dev": "nodemon -w ./",
+    "test": "echo no-tests-yet"
   },
   "dependencies": {
     "axios": "^0.21.0",
