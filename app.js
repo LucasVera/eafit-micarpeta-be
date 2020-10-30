@@ -10,6 +10,7 @@ const bodyParser = require('body-parser');
 
 var indexRouter = require('./src/routes/index');
 const apiRouter = require('./src/routes/api');
+const initMongoConnection = require('./src/db/initConnection');
 
 var app = express();
 app.server = http.createServer(app);
@@ -51,6 +52,7 @@ app.use(function(err, req, res, next) {
 
 app.server.listen(process.env.PORT || 8080, () => {
   console.log(`Started on port ${app.server.address().port}`);
+  initMongoConnection();
 });
 
 module.exports = app;
