@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { addIdFieldToSchema } = require('./helpers');
 
 const FileSchema = new mongoose.Schema({
   name: String,
@@ -7,5 +8,7 @@ const FileSchema = new mongoose.Schema({
   type: String,
   createdAt: { type: Date, default: Date.now },
 });
+
+addIdFieldToSchema(FileSchema);
 
 module.exports = mongoose.model('File', FileSchema);
