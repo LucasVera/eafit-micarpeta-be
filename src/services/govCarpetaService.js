@@ -33,17 +33,11 @@ module.exports = {
   },
 
   authenticateDocument(id, urlDocument, title) {
+    const url = encodeURIComponent(urlDocument);
     return new Promise((resolve, reject) => {
-      axios.post(`${GOV_CARPETA_API_URL}/authenticateDocument/${id}/${urlDocument}/${title}`, {
-        name,
-        userId,
-        url,
-        type
-      }).then(({ data, status, statusText }) => {
+      axios.get(`${GOV_CARPETA_API_URL}/authenticateDocument/45/${url}/${title}`).then(({ data, status, statusText }) => {
         return resolve({ data, status, statusText });
       }).catch(ex => reject(ex));
     });
   }
-
-
 }

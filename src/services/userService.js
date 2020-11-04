@@ -38,5 +38,9 @@ module.exports = {
         return reject(ex);
       });
     });
+  },
+
+  findUserByNationalId(nationalId) {
+    return User.findOne({ nationalId });
   }
 };

@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 
 app.use(cors());
 app.use(bodyParser.json({
-  limit: '10000kb'
+  limit: '10mb'
 }))
 
 app.use(logger('dev'));
