@@ -30,5 +30,20 @@ module.exports = {
         return resolve({ data, status, statusText });
       }).catch(ex => reject(ex));
     });
+  },
+
+  authenticateDocument(id, urlDocument, title) {
+    return new Promise((resolve, reject) => {
+      axios.post(`${GOV_CARPETA_API_URL}/authenticateDocument/${id}/${urlDocument}/${title}`, {
+        name,
+        userId,
+        url,
+        type
+      }).then(({ data, status, statusText }) => {
+        return resolve({ data, status, statusText });
+      }).catch(ex => reject(ex));
+    });
   }
+
+
 }

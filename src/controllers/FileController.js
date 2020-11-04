@@ -3,6 +3,7 @@ const FileType = require('file-type');
 const fs = require('fs');
 const { handleAndReturnError } = require('../services/errorService');
 const { uploadFileToS3 } = require('../services/fileService');
+const {authenticateDocument } = require("../services/govCarpetaService");
 
 module.exports = {
   UploadFile(req, res) {
@@ -24,8 +25,9 @@ module.exports = {
             const fileName = `test-${Date.now().toString()}` // Nombre del archivo aquí
             const {
               title,
-              url
-            } = uploadFileToS3();
+              url,
+              id
+            } = uploadFileToS3(file);
             // 1. llamar endpoint de gov carpeta con title, url y id
             // 2. guardar en base de datos (importar modelo y File.create({...}))
           }).catch(ex => handleAndReturnError(res, ex));
