@@ -7,5 +7,5 @@ module.exports = function(app) {
   app.post('/user/validate', ValidateUser);
   app.post('/user/register', RegisterUser);
   app.post('/user/login', LoginUser);
-  app.post('/file/upload', UploadFile);
+  app.post('/file/upload/:id', UploadFile);
 };
