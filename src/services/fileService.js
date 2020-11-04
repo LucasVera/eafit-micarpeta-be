@@ -1,5 +1,5 @@
 const multiparty = require('multiparty');
 
 module.exports = {
-  uploadFileToS3(file, )
+  //uploadFileToS3(file)
 }
